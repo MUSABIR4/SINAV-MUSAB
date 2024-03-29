@@ -1,15 +1,14 @@
-const button = document.getElementById('ChangeColor');
-let randomNum = () => {
-    let randomNumber = (Math.floor(Math.random() * 256));
-    return randomNumber;
+const btn = document.getElementById('ChangeColor');
+let randomNumber = () => {
+    let randomNum = (Math.floor(Math.random() * 256));
+    return randomNum;
 }
 
-let ChangeColor = () => {
-    
-    let randomColor = `rgb(${ramdomNumber()} ,${ramdomNumber()} ,${ramdomNumber()})`;
+let changeColor = () => {
+    let randomColor = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
+   
     document.body.style.backgroundColor = randomColor;
 }
 
-
-button.addEventListener('click', ChangeColor);
-window.addEventListener('load', ChangeColor);
+btn.addEventListener('click', changeColor);
+window.addEventListener('load', changeColor);
